@@ -23,20 +23,25 @@
     
     <!-- SIDEBAR -->
     <section id="sidebar">
-        <a href="index.html" class="brand"><img src="images/logo.png" width="70px" height="70px"> TAGA-CUYO</a>
+        <a href="Untitled-1.html" class="brand"><img src="images/logo.png" width="70px" height="70px"> TAGA-CUYO</a>
         <ul class="side-menu">
-            <li><a href="index.html"><i class='bx bxs-dashboard icon'></i> Admin Dashboard</a></li>
+            <li><a href="Untitled-1.html"><i class='bx bxs-dashboard icon'></i> Admin Dashboard</a></li>
             <li class="divider" data-text="main">Main</li>
 			<li>
                 <a href="#"><i class='bx bxs-inbox icon'></i> User Management <i class='bx bx-chevron-right icon-right'></i></a>
                 <ul class="side-dropdown">
-                    <li><a href="user_management_user.html" class="active"><i class='mdi mdi-account icon'></i> List of Users</a></li>
-                    <li><a href="manage_staff.html"><i class='uil uil-users-alt icon'></i> Manage Staff</a></li>
+                    <li><a href="user_management_user.html" class="active"><i class='bx bxs-message-rounded'></i> List of Users</a></li>
+                    <li><a href="ManageStaff2.html"><i class='uil uil-headphones-alt'></i> Manage Staff</a></li>
                 </ul>
             </li>
-            <li><a href="reports_and_analytics.html"><i class='bx bxs-widget icon'></i> Reports and Analytics</a></li>
-            <li><a href="feedback.html"><i class='bx bxs-comment icon'></i> Support and Feedback</a></li>
-            <li><a href="#"><i class='bx bxs-cog icon'></i> Settings</a></li>
+            <li>
+                <a href="#"><i class='bx bxs-comment icon'></i> Support and Feedback <i class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="feedback2.html" class="active"><i class='mdi mdi-account icon'></i>User Feedback</a></li>
+                    <li><a href="user_support.html"><i class='uil uil-users-alt icon'></i>User Support</a></li>
+                </ul>
+            </li>
+            <li><a href="settings2.html"><i class='bx bxs-cog icon'></i> Settings</a></li>
         </ul>
     </section>
     <!-- SIDEBAR -->
@@ -59,7 +64,6 @@
                 </ul>
             </div>
         </nav>
-        
         <main>
             <div class="user-management">
                 <h2>User Management > List of users</h2>
@@ -192,18 +196,9 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Prevent the default link behavior
         userManagementDropdown.classList.toggle('show'); // Toggle the dropdown
     });
-
-	
-			// Profile dropdown toggle
-			const profileToggle = document.querySelector('.profile img'); // Use the profile image as the toggle
-			const profileLink = document.querySelector('.profile-link');
-	
-			profileToggle.addEventListener('click', function () {
-				profileLink.classList.toggle('show'); // Toggle the profile dropdown
-			});
 		});
 	</script>
 	 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -383,6 +383,7 @@ main .card .head .icon {
 main .card .head .icon.down {
 	color: var(--red);
 }
+
 @media screen and (max-width: 68px) {}
 .custom-line {
     border: none;               /* Remove default border */
@@ -430,239 +431,37 @@ main .card .head .icon.down {
     margin: 0;
     padding-right: 20px; /* Space between heading and search bar */
 }
+/*TABLEEEEEEEEEE
 
-
-.add-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
-    
-	position:static;
-   
-}
-
-.add-btn:hover {
-    background-color: #218838;
-   
-}
-
+/* Style for the table */
 table {
-    width: 200%;
+    width: 200%; /* Make table take up the full width of the window */
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+	margin-left: 5%;
 }
 
-table th, table td {
-    padding: 15px;
+/* Style for the table header and rows */
+th, td {
+    padding: 10px; /* Set reasonable padding */
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ccc; /* Add border for clarity */
+    word-wrap: break-word; /* Wrap long text */
+}
+th {
+    background-color: #b3d1ff;
+    color: #000;
+}
+tr:nth-child(even) {
+    background-color: #e6f0ff;
+}
+tr:nth-child(odd) {
+    background-color: #fff;
 }
 
-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-	width: 5000px;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.reset-btn, .delete-btn {
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.reset-btn {
-    background-color: #007bff;
-    color: white;
-    margin-right: 10px;
-}
-
-.reset-btn:hover {
-    background-color: #0056b3;
-}
-
-.delete-btn {
-    background-color: #dc3545;
-    color: white;
-}
-
-.delete-btn:hover {
-    background-color: #c82333;
-}
 @media screen and (max-width: 768px) {
     th, td {
         font-size: 12px; /* Reduce font size for smaller screens */
         padding: 8px; /* Adjust padding */
     }
-}
-.search-bar {
-    display: flex;
-    align-items: center;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    padding: 5px;
-    width: 300px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    flex-grow: 1;
-    padding: 5px 10px;
-    border-radius: 25px;
-}
-
-.search-bar button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.search-bar button i {
-    color: #333;
-    font-size: 16px;
-}
-
-.header-search {
-    display: flex;
-    align-items: center; /* Aligns items (heading and search bar) in the center vertically */
-    justify-content: space-between; /* Adjusts space between the heading and search bar */
-}
-
-/* Optional: Adjust the margin for the heading */
-.header-search h2 {
-    margin: 0;
-    padding-right: 20px; /* Space between heading and search bar */
-}
-/* Modal styling */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    width: 400px;
-    animation: fadeIn 0.5s;
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.modal-body {
-    margin-top: 10px;
-}
-
-.close-btn {
-    color: #888;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: #ff0000;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-}
-
-/* General input styling */
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: border-color 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #28a745;
-    outline: none;
-}
-
-/* Password container and toggle icon */
-.password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.password-input {
-    width: 100%;
-    padding-right: 40px; /* Space for the toggle button */
-}
-
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    color: #666;
-}
-
-.toggle-password:hover {
-    color: #000;
-}
-
-/* Button styling */
-.btn_add {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.btn_add:hover {
-    background-color: #218838;
 }
